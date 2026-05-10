@@ -1,0 +1,133 @@
+/*********************************************************************************
+
+	Template Name: Techwizard lides Template Demo Landing Page
+	Note: This is style css.
+
+**********************************************************************************/
+/***************************************************************/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: #191925; */
+  background-color: #171212;
+  color: #878e99;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../public/images/bg/noise.gif);
+  z-index: -1;
+  background-color: rebeccapurple;
+  opacity: 0.05;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.hero-bg {
+  position: relative;
+  background: url(../public/images/bg/hero-banner.jpg) no-repeat center center;
+
+  background-size: cover;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.5px);
+}
+
+header nav ul li {
+  padding: 35px 0;
+}
+
+header nav ul li a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: #14b8a6;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #14b8a6;
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header nav ul li a.active {
+  color: #14b8a6;
+}
+
+header nav ul li a.active::after {
+  width: 100%;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header.is-sticky {
+  position: fixed;
+  animation: slideDown 0.5s ease-out;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.scroll-image-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  header nav ul li {
+    padding: 5px 0;
+  }
+}
