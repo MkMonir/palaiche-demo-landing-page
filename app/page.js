@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import Feature from './components/Feature';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import PreviewItem from './components/PreviewItem';
-import Title from './components/Title';
-import { demoItems, features } from './data';
-import Image from 'next/image';
-import ComingSoonImage from '@/public/images/preview/coming-soon.jpg';
+import Link from "next/link";
+import Feature from "./components/Feature";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import PreviewItem from "./components/PreviewItem";
+import Title from "./components/Title";
+import { demoItems, features } from "./data";
+import Image from "next/image";
+import ComingSoonImage from "@/public/images/preview/coming-soon.jpg";
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
                   src={ComingSoonImage}
                   alt="More Coming Soon..."
                   priority
-                  className="w-full h-full rounded-md min-h-[400px] max-h-[400px] object-cover object-center "
+                  className="w-full h-full rounded-md min-h-[420px] max-h-[420px] object-cover object-center "
                 />
               </li>
               {/* Comming Soon */}
@@ -97,7 +97,10 @@ export default function Home() {
       <section id="feature" className="py-12">
         <div className="container">
           {/* TITLE */}
-          <Title title="Key Features" subtitle="Unlock the Power of Our Platform" />
+          <Title
+            title="Key Features"
+            subtitle="Unlock the Power of Our Platform"
+          />
           {/* TITLE */}
 
           {/* FEATURE ITEMS */}
