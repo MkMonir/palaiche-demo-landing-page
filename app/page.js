@@ -64,8 +64,8 @@ export default function Home() {
         <div className="container">
           {/* TITLE */}
           <Title
-            title="23+ Inner Pages"
-            subtitle="Exciting Inner Pages Make Your Website More Interesting and Flexible"
+            title="35+ Inner Pages"
+            subtitle="Comprehensive set of pages including Services, Portfolio variations, Team, Blog layouts, and Contact forms. Build Your Business's Complete Website Effortlessly"
           />
           {/* TITLE */}
 
@@ -140,7 +140,7 @@ export default function Home() {
 
           <div className="flex items-center gap-6 justify-center flex-wrap">
             <a
-              href="mailto:khanmonir1335@gmail.com?subject=Techwizard Template Support!"
+              href="mailto:khanmonir1335@gmail.com?subject=Palaiche Template Support!"
               className="py-4 px-6 rounded-md border-2 border-solid border-primary font-semibold text-gray hover:bg-primary hover:text-black transition-all duration-500 hover:-translate-y-2 -mt-5"
             >
               Contact Us

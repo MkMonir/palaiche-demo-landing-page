@@ -49,14 +49,14 @@ const Header = () => {
 
             <li>
               <Link
-                href="https://techwizard-documentation.vercel.app/"
+                href="https://palaiche-documentation.vercel.app/"
                 target="_blank"
               >
                 Documentation
               </Link>
             </li>
             <li>
-              <a href="mailto:khanmonir1335@gmail.com?subject=techwizard Template Support!">
+              <a href="mailto:khanmonir1335@gmail.com?subject=Palaiche Template Support!">
                 Support
               </a>
             </li>

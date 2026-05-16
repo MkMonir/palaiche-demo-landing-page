@@ -1,267 +1,393 @@
-import HomePage1 from '@/public/images/preview/home-v1.jpg';
-import HomePage2 from '@/public/images/preview/home-v2.jpg';
-import InnerPage1 from '@/public/images/preview/about.jpg';
-import InnerPage2 from '@/public/images/preview/services.jpg';
-import InnerPage3 from '@/public/images/preview/single-service.jpg';
-import InnerPage4 from '@/public/images/preview/our-team.jpg';
-import InnerPage5 from '@/public/images/preview/single-team.jpg';
-import InnerPage6 from '@/public/images/preview/single-member.jpg';
-import InnerPage7 from '@/public/images/preview/career.jpg';
-import InnerPage8 from '@/public/images/preview/job-details.jpg';
-import InnerPage9 from '@/public/images/preview/why-choose-us.jpg';
-import InnerPage10 from '@/public/images/preview/management-message.jpg';
-import InnerPage11 from '@/public/images/preview/portfolio.jpg';
-import InnerPage12 from '@/public/images/preview/portfolio-details.jpg';
-import InnerPage13 from '@/public/images/preview/portfolio-masonry.jpg';
-import InnerPage14 from '@/public/images/preview/blog.jpg';
-import InnerPage15 from '@/public/images/preview/blog-details.jpg';
-import InnerPage16 from '@/public/images/preview/contact.jpg';
-import InnerPage17 from '@/public/images/preview/faq.jpg';
-import InnerPage18 from '@/public/images/preview/terms-and-conditions.jpg';
-import InnerPage19 from '@/public/images/preview/privacy-policy.jpg';
-import InnerPage20 from '@/public/images/preview/login.jpg';
-import InnerPage21 from '@/public/images/preview/register.jpg';
-import InnerPage22 from '@/public/images/preview/not-found.jpg';
-import InnerPage23 from '@/public/images/preview/gallery.jpg';
-import InnerPage24 from '@/public/images/preview/single-album.jpg';
+import HomePage1 from "@/public/images/preview/home-v1.jpg";
+import HomePage2 from "@/public/images/preview/home-v2.jpg";
 
-import { HiMiniDevicePhoneMobile } from 'react-icons/hi2';
+// Inner Page Imports
+// Note: You can reuse these images for similar page types if specific previews aren't available yet
+import AboutImg from "@/public/images/preview/about.jpg";
+import ServicesV1Img from "@/public/images/preview/services-v1.jpg";
+import ServicesV2Img from "@/public/images/preview/services-v2.jpg";
+import ServicesCarouselV1Img from "@/public/images/preview/services-carousel-v1.jpg";
+import ServicesCarouselV2Img from "@/public/images/preview/services-carousel-v2.jpg";
+import SingleServiceImg from "@/public/images/preview/service-details.jpg";
+import TeamV1Img from "@/public/images/preview/team-v1.jpg";
+import TeamV2Img from "@/public/images/preview/team-v2.jpg";
+import TeamCarouselV1Img from "@/public/images/preview/team-carousel-v1.jpg";
+import TeamCarouselV2Img from "@/public/images/preview/team-carousel-v2.jpg";
+import TeamDetailsImg from "@/public/images/preview/team-details.jpg";
+import CareerImg from "@/public/images/preview/career.jpg";
+import JobDetailsImg from "@/public/images/preview/career-details.jpg";
+import PortfolioV1Img from "@/public/images/preview/portfolio-v1.jpg";
+import PortfolioV2Img from "@/public/images/preview/portfolio-v2.jpg";
+import PortfolioCarouselV1Img from "@/public/images/preview/portfolio-carousel-v1.jpg";
+import PortfolioCarouselV2Img from "@/public/images/preview/portfolio-carousel-v2.jpg";
+import PortfolioMasonryV1Img from "@/public/images/preview/portfolio-masonry-v1.jpg";
+import PortfolioMasonryV2Img from "@/public/images/preview/portfolio-masonry-v2.jpg";
+import PortfolioDetailsV1Img from "@/public/images/preview/portfolio-details-v1.jpg";
+import PortfolioDetailsV2Img from "@/public/images/preview/portfolio-details-v2.jpg";
+import BlogV1Img from "@/public/images/preview/blog-v1.jpg";
+import BlogV2Img from "@/public/images/preview/blog-v2.jpg";
+import BlogStandardImg from "@/public/images/preview/blog-standard.jpg";
+import BlogStandardLeftSidebarImg from "@/public/images/preview/blog-standard-left-sidebar.jpg";
+import BlogDetailsImg from "@/public/images/preview/blog-details.jpg";
+import BlogDetailsLeftSidebarImg from "@/public/images/preview/blog-details-left-sidebar.jpg";
+import ContactImg from "@/public/images/preview/contact.jpg";
+import FaqImg from "@/public/images/preview/faq.jpg";
+import PricingImg from "@/public/images/preview/pricing.jpg";
+import LoginImg from "@/public/images/preview/login.jpg";
+import RegisterImg from "@/public/images/preview/register.jpg";
+import TermsImg from "@/public/images/preview/terms.jpg";
+import PrivacyImg from "@/public/images/preview/privacy.jpg";
+import ComingSoonImg from "@/public/images/preview/coming.jpg";
+import NotFoundImg from "@/public/images/preview/404.jpg";
+
+import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import {
   TbBrandTailwind,
   TbBrowserCheck,
   TbHeadphonesFilled,
-  TbMoonFilled,
   TbTerminal,
-} from 'react-icons/tb';
-import { SiGooglefonts, SiNextdotjs, SiSwiper } from 'react-icons/si';
-import { FaCss3Alt, FaPenNib, FaReact } from 'react-icons/fa6';
-import { CiPen } from 'react-icons/ci';
+  TbFileCode,
+} from "react-icons/tb";
+import { SiGooglefonts, SiHtml5, SiCss3, SiGulp } from "react-icons/si";
+import { FaPenNib, FaLayerGroup } from "react-icons/fa6";
+
+const BASE_URL = "https://palaiche-template.vercel.app";
 
 export const demoItems = [
+  // ==========================================
+  // HOME PAGES
+  // ==========================================
   {
     id: 1,
-    title: 'Home Version One',
+    title: "Home Version One",
     image: HomePage1,
-    previewLink: 'https://techwizard-template.vercel.app/',
+    previewLink: `${BASE_URL}/`,
   },
   {
     id: 2,
-    title: 'Home Version Two',
+    title: "Home Version Two",
     image: HomePage2,
-    previewLink: 'https://techwizard-template.vercel.app/home-two',
+    previewLink: `${BASE_URL}/home-two`,
   },
+
+  {
+    id: 16,
+    title: "About Us",
+    image: AboutImg,
+    previewLink: `${BASE_URL}/about`,
+  },
+
+  // ==========================================
+  // SERVICES
+  // ==========================================
   {
     id: 3,
-    title: 'About',
-    image: InnerPage1,
-    previewLink: 'https://techwizard-template.vercel.app/about',
+    title: "Services One",
+    image: ServicesV1Img,
+    previewLink: `${BASE_URL}/services`,
   },
   {
     id: 4,
-    title: 'Services',
-    image: InnerPage2,
-    previewLink: 'https://techwizard-template.vercel.app/services',
+    title: "Services Two",
+    image: ServicesV2Img,
+    previewLink: `${BASE_URL}/services-two`,
   },
   {
     id: 5,
-    title: 'Single Service',
-    image: InnerPage3,
-    previewLink: 'https://techwizard-template.vercel.app/services/ai-integration',
+    title: "Services Carousel One",
+    image: ServicesCarouselV1Img,
+    previewLink: `${BASE_URL}/services-carousel-one`,
   },
   {
     id: 6,
-    title: 'Our Team',
-    image: InnerPage4,
-    previewLink: 'https://techwizard-template.vercel.app/about/our-team',
+    title: "Services Carousel Two",
+    image: ServicesCarouselV2Img,
+    previewLink: `${BASE_URL}/services-carousel-two`,
   },
   {
     id: 7,
-    title: 'Single Team',
-    image: InnerPage5,
-    previewLink: 'https://techwizard-template.vercel.app/about/our-team/web-dev',
+    title: "Single Service",
+    image: SingleServiceImg,
+    previewLink: `${BASE_URL}/single-service`,
   },
+
+  // ==========================================
+  // PORTFOLIO
+  // ==========================================
   {
     id: 8,
-    title: 'Single Member',
-    image: InnerPage6,
-    previewLink: 'https://techwizard-template.vercel.app/about/our-team/web-dev/john-doe',
+    title: "Portfolio One",
+    image: PortfolioV1Img,
+    previewLink: `${BASE_URL}/portfolio-one`,
   },
   {
     id: 9,
-    title: 'Career',
-    image: InnerPage7,
-    previewLink: 'https://techwizard-template.vercel.app/career',
+    title: "Portfolio Two",
+    image: PortfolioV2Img,
+    previewLink: `${BASE_URL}/portfolio-two`,
   },
   {
     id: 10,
-    title: 'Job Detail',
-    image: InnerPage8,
-    previewLink: 'https://techwizard-template.vercel.app/career/frontend-developer',
+    title: "Portfolio Masonry One",
+    image: PortfolioMasonryV1Img,
+    previewLink: `${BASE_URL}/portfolio-masonry-one`,
   },
   {
     id: 11,
-    title: 'Why Choose Us',
-    image: InnerPage9,
-    previewLink: 'https://techwizard-template.vercel.app/about/why-choose-us',
+    title: "Portfolio Masonry Two",
+    image: PortfolioMasonryV2Img,
+    previewLink: `${BASE_URL}/portfolio-masonry-two`,
   },
   {
     id: 12,
-    title: 'Management Message',
-    image: InnerPage10,
-    previewLink: 'https://techwizard-template.vercel.app/about/management-message',
-  },
-  {
-    id: 25,
-    title: 'Gallery',
-    image: InnerPage23,
-    previewLink: 'https://techwizard-template.vercel.app/about/gallery',
-  },
-  {
-    id: 26,
-    title: 'Single Album',
-    image: InnerPage24,
-    previewLink: 'https://techwizard-template.vercel.app/about/gallery/events',
+    title: "Portfolio Carousel One",
+    image: PortfolioCarouselV1Img,
+    previewLink: `${BASE_URL}/portfolio-carousel-one`,
   },
   {
     id: 13,
-    title: 'Portfolio',
-    image: InnerPage11,
-    previewLink: 'https://techwizard-template.vercel.app/portfolio',
+    title: "Portfolio Carousel Two",
+    image: PortfolioCarouselV2Img,
+    previewLink: `${BASE_URL}/portfolio-carousel-two`,
   },
   {
     id: 14,
-    title: 'Portfolio Details',
-    image: InnerPage12,
-    previewLink: 'https://techwizard-template.vercel.app/portfolio/online-bookstore',
+    title: "Single Portfolio One",
+    image: PortfolioDetailsV1Img,
+    previewLink: `${BASE_URL}/single-portfolio-one`,
   },
   {
     id: 15,
-    title: 'Portfolio Masonry',
-    image: InnerPage13,
-    previewLink: 'https://techwizard-template.vercel.app/portfolio-masonry',
+    title: "Single Portfolio Two",
+    image: PortfolioDetailsV2Img,
+    previewLink: `${BASE_URL}/single-portfolio-two`,
   },
-  {
-    id: 16,
-    title: 'Blog',
-    image: InnerPage14,
-    previewLink: 'https://techwizard-template.vercel.app/blog',
-  },
+
+  // ==========================================
+  // PAGES - ABOUT & TEAM
+  // ==========================================
+
   {
     id: 17,
-    title: 'Blog Details',
-    image: InnerPage15,
-    previewLink:
-      'https://techwizard-template.vercel.app/blog/the-ever-expanding-horizons-of-web-development',
+    title: "Team One",
+    image: TeamV1Img,
+    previewLink: `${BASE_URL}/team-one`,
   },
   {
     id: 18,
-    title: 'Contact',
-    image: InnerPage16,
-    previewLink: 'https://techwizard-template.vercel.app/contact',
+    title: "Team Two",
+    image: TeamV2Img,
+    previewLink: `${BASE_URL}/team-two`,
   },
   {
     id: 19,
-    title: 'FAQ',
-    image: InnerPage17,
-    previewLink: 'https://techwizard-template.vercel.app/faq',
+    title: "Team Carousel One",
+    image: TeamCarouselV1Img,
+    previewLink: `${BASE_URL}/team-carousel-one`,
   },
   {
     id: 20,
-    title: 'Terms and Conditions',
-    image: InnerPage18,
-    previewLink: 'https://techwizard-template.vercel.app/terms-and-conditions',
+    title: "Team Carousel Two",
+    image: TeamCarouselV2Img,
+    previewLink: `${BASE_URL}/team-carousel-two`,
   },
   {
     id: 21,
-    title: 'Privacy Policy',
-    image: InnerPage19,
-    previewLink: 'https://techwizard-template.vercel.app/privacy-policy',
+    title: "Team Details",
+    image: TeamDetailsImg,
+    previewLink: `${BASE_URL}/team-details`,
   },
+
+  // ==========================================
+  // PAGES - CAREERS
+  // ==========================================
   {
     id: 22,
-    title: 'Login',
-    image: InnerPage20,
-    previewLink: 'https://techwizard-template.vercel.app/login',
+    title: "Careers",
+    image: CareerImg,
+    previewLink: `${BASE_URL}/careers`,
   },
   {
     id: 23,
-    title: 'Register',
-    image: InnerPage21,
-    previewLink: 'https://techwizard-template.vercel.app/register',
+    title: "Career Details",
+    image: JobDetailsImg,
+    previewLink: `${BASE_URL}/career-details`,
+  },
+
+  // ==========================================
+  // BLOG
+  // ==========================================
+  {
+    id: 32,
+    title: "Blog One",
+    image: BlogV1Img,
+    previewLink: `${BASE_URL}/blog-one`,
   },
   {
+    id: 33,
+    title: "Blog Two",
+    image: BlogV2Img,
+    previewLink: `${BASE_URL}/blog-two`,
+  },
+  {
+    id: 34,
+    title: "Blog Standard",
+    image: BlogStandardImg,
+    previewLink: `${BASE_URL}/blog-standard`,
+  },
+  {
+    id: 35,
+    title: "Blog Left Sidebar",
+    image: BlogStandardLeftSidebarImg,
+    previewLink: `${BASE_URL}/blog-left-sidebar`,
+  },
+  {
+    id: 36,
+    title: "Blog Details",
+    image: BlogDetailsImg,
+    previewLink: `${BASE_URL}/blog-details`,
+  },
+  {
+    id: 37,
+    title: "Blog Details Left Sidebar",
+    image: BlogDetailsLeftSidebarImg,
+    previewLink: `${BASE_URL}/blog-details-left-sidebar`,
+  },
+
+  // ==========================================
+  // CONTACT
+  // ==========================================
+  {
+    id: 38,
+    title: "Contact",
+    image: ContactImg,
+    previewLink: `${BASE_URL}/contact`,
+  },
+
+  // ==========================================
+  // PAGES - UTILITIES
+  // ==========================================
+  {
     id: 24,
-    title: '404 Page',
-    image: InnerPage22,
-    previewLink: 'https://techwizard-template.vercel.app/not-found',
+    title: "Pricing",
+    image: PricingImg,
+    previewLink: `${BASE_URL}/pricing`,
+  },
+  {
+    id: 25,
+    title: "FAQs",
+    image: FaqImg,
+    previewLink: `${BASE_URL}/faq`,
+  },
+  {
+    id: 26,
+    title: "Coming Soon",
+    image: ComingSoonImg,
+    previewLink: `${BASE_URL}/coming-soon`,
+  },
+  {
+    id: 27,
+    title: "Register",
+    image: RegisterImg,
+    previewLink: `${BASE_URL}/register`,
+  },
+  {
+    id: 28,
+    title: "Login",
+    image: LoginImg,
+    previewLink: `${BASE_URL}/login`,
+  },
+  {
+    id: 29,
+    title: "Terms & Conditions",
+    image: TermsImg,
+    previewLink: `${BASE_URL}/terms-conditions`,
+  },
+  {
+    id: 30,
+    title: "Privacy Policy",
+    image: PrivacyImg,
+    previewLink: `${BASE_URL}/privacy-policy`,
+  },
+  {
+    id: 31,
+    title: "404 Page",
+    image: NotFoundImg,
+    previewLink: `${BASE_URL}/404`,
   },
 ];
 
 export const features = [
   {
-    id: 4,
-    icon: <TbBrandTailwind />,
-    title: 'Tailwind CSS3',
-    desc: 'TailwindCSS is a modern utility-first CSS framework that helps you build responsive and customizable web designs quickly and efficiently.',
-  },
-  {
-    id: 6,
-    icon: <FaReact />,
-    title: 'ReactJs',
-    desc: 'ReactJS is a dynamic JavaScript library for crafting interactive user interfaces with ease and efficiency.',
-  },
-  {
-    id: 6,
-    icon: <SiNextdotjs />,
-    title: 'NextJs',
-    desc: 'Next.js is a versatile React framework for building fast and scalable web applications with ease.',
-  },
-  {
-    id: 6,
-    icon: <SiGooglefonts />,
-    title: 'Google Fonts',
-    desc: 'Easily change entire fonts from the Google Fonts library. Just a few lines of code.',
-  },
-  {
-    id: 6,
-    icon: <SiSwiper />,
-    title: 'SwiperJs',
-    desc: 'Elevate your web experience with seamless content sliding. Ideal for mobile-friendly, touch-enabled interactions, smooth transitions.',
-  },
-  {
-    id: 6,
-    icon: <CiPen />,
-    title: 'Highly Customizable?',
-    desc: 'Build something uniquely tailored to your specifications in just a few minutes.',
-  },
-  {
-    id: 6,
-    icon: <TbBrowserCheck />,
-    title: 'Browser Compatibility',
-    desc: 'This template works seamlessly with popular browsers like Firefox, Internet Explorer, Chrome...',
-  },
-  {
     id: 1,
-    icon: <HiMiniDevicePhoneMobile />,
-    title: '100% Responsive Design',
-    desc: 'All elements are fully responsive, ensuring optimal display on high-resolution screens.',
+    icon: <SiHtml5 />,
+    title: "Built with HTML5, CSS3 & JS",
+    desc: "Standard-compliant code structure ensuring high performance and compatibility across all modern web standards.",
   },
   {
     id: 2,
-    icon: <TbTerminal />,
-    title: 'Well-Documented Code',
-    desc: 'Our codebase comes with comprehensive documentation, making it easy for developers to understand, customize, and maintain.',
+    icon: <TbBrandTailwind />,
+    title: "Tailwind CSS v3.5+",
+    desc: "Utilizes the latest Tailwind CSS framework for rapid UI development, utility-first styling, and easy customization.",
   },
   {
     id: 3,
-    icon: <FaPenNib />,
-    title: 'Modern Design',
-    desc: 'Featuring a sleek, contemporary design, our project ensures a visually appealing, up-to-date, and user-friendly interface that captivates users.',
+    icon: <SiGulp />,
+    title: "Gulp Build Tool",
+    desc: "Automated workflow for compiling assets, minifying code, and optimizing images for production-ready deployment.",
+  },
+  {
+    id: 4,
+    icon: <FaLayerGroup />,
+    title: "2 Unique Home Pages",
+    desc: "Includes two distinct homepage layouts with Image Mega Menu Preview options for versatile presentation.",
   },
   {
     id: 5,
+    icon: <TbFileCode />,
+    title: "35+ Inner Pages",
+    desc: "Comprehensive set of pages including Services, Portfolio variations, Team, Blog layouts, and Contact forms.",
+  },
+  {
+    id: 6,
+    icon: <HiMiniDevicePhoneMobile />,
+    title: "Fully Responsive Design",
+    desc: "Optimized for seamless viewing on Mobile, Tablet, and Desktop devices with fluid grid systems.",
+  },
+  {
+    id: 7,
+    icon: <TbBrowserCheck />,
+    title: "Cross-Browser Compatible",
+    desc: "Tested and verified to work seamlessly across Chrome, Firefox, Safari, Edge, and other major browsers.",
+  },
+  {
+    id: 8,
+    icon: <SiGooglefonts />,
+    title: "Google Fonts Integration",
+    desc: "Uses Kumbh/Sans fonts from Google Fonts library for modern typography that is easy to swap or customize.",
+  },
+  {
+    id: 9,
+    icon: <FaPenNib />,
+    title: "Smooth Animations",
+    desc: "Integrated Fade, Slide, and Hover transitions using CSS and JavaScript for an engaging user experience.",
+  },
+  {
+    id: 10,
+    icon: <SiCss3 />,
+    title: "Easy Customization",
+    desc: "Leverage Tailwind utility classes to change colors, spacing, and layout without writing custom CSS.",
+  },
+  {
+    id: 11,
+    icon: <TbTerminal />,
+    title: "Clean & Commented Code",
+    desc: "Well-structured and documented codebase makes it easy for developers to understand, modify, and maintain.",
+  },
+  {
+    id: 12,
     icon: <TbHeadphonesFilled />,
-    title: 'Fast & Friendly Support',
-    desc: 'We are provide 24 hours support for all clients. You can purchase without hesitation.',
+    title: "Premium Support",
+    desc: "Dedicated support team ready to assist with any issues or questions regarding the template usage.",
   },
 ];
