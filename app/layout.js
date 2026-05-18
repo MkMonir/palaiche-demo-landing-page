@@ -35,11 +35,11 @@ export const metadata = {
     title: "Palaiche - Multipurpose Business Agency Html Tailwind CSS Template",
     description:
       "Responsive multipurpose business agency HTML template built with Tailwind CSS.",
-    url: "https://palaiche-template.vercel.app//",
+    url: "https://palaiche-template.vercel.app/",
     siteName: "Palaiche",
     images: [
       {
-        url: "/assets/images/logo.png", // Ensure this path is correct in your public folder
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Palaiche Logo",
@@ -53,7 +53,7 @@ export const metadata = {
     title: "Palaiche - Multipurpose Business Agency Html Tailwind CSS Template",
     description:
       "Responsive multipurpose business agency HTML template built with Tailwind CSS.",
-    images: ["/assets/images/logo.png"],
+    images: ["/logo.png"],
     creator: "@mktemplatewizard", // Optional: Add actual twitter handle if available
   },
   robots: {
@@ -68,8 +68,8 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/assets/images/favicon.ico",
-    shortcut: "/assets/images/favicon.ico",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   other: {
     "theme-color": "#33b6ff",

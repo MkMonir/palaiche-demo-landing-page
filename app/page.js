@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import PreviewItem from "./components/PreviewItem";
 import Title from "./components/Title";
-import { demoItems, features } from "./data";
+import { demoItems, features, PURCHASE_URL, SUPPORT_EMAIL } from "./data";
 import Image from "next/image";
 import ComingSoonImage from "@/public/images/preview/coming-soon.jpg";
 
@@ -17,11 +17,11 @@ export default function Home() {
       <section className="overflow-x-hidden scroll-image-section relative mb-20">
         {/* ITEMS */}
         <ul className="flex animate-scrolling-infinit relative -z-0">
-          {demoItems?.map((item) => (
-            <li key={item?.id} className="flex-scroll-item">
+          {[...demoItems, ...demoItems]?.map((item, idx) => (
+            <li key={`${item?.id}-${idx}`} className="flex-scroll-item">
               <Image
                 src={item.image}
-                alt="Preview Image"
+                alt={item?.title || "Preview"}
                 className="max-h-[450px] object-top object-cover"
               />
             </li>
@@ -116,6 +116,45 @@ export default function Home() {
       </section>
       {/* PREVIEW ITEMS */}
 
+      {/* QUICK START */}
+      <section id="quick-start" className="py-12">
+        <div className="container">
+          <Title
+            title="Quick Start"
+            subtitle="Get the template running locally in minutes"
+          />
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="p-8 rounded-md border border-solid border-border space-y-3">
+              <h3 className="text-2xl font-semibold text-gray">
+                1. Install dependencies
+              </h3>
+              <pre className="bg-tertiary/60 border border-border rounded-md p-4 overflow-auto text-sm text-[#c4cfde]">
+                <code>npm install</code>
+              </pre>
+            </div>
+            <div className="p-8 rounded-md border border-solid border-border space-y-3">
+              <h3 className="text-2xl font-semibold text-gray">
+                2. Start dev server
+              </h3>
+              <pre className="bg-tertiary/60 border border-border rounded-md p-4 overflow-auto text-sm text-[#c4cfde]">
+                <code>npm run dev</code>
+              </pre>
+            </div>
+            <div className="p-8 rounded-md border border-solid border-border space-y-3">
+              <h3 className="text-2xl font-semibold text-gray">
+                3. Customize content
+              </h3>
+              <p className="text-[#c4cfde]">
+                Update demo links and features in{" "}
+                <span className="text-gray font-medium">app/data.js</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* QUICK START */}
+
       {/* FOOTER SECTION */}
       <footer className="py-20 mt-20 border-t-2 border-solid border-border hidden">
         <div className="container flex flex-col items-center">
@@ -140,13 +179,13 @@ export default function Home() {
 
           <div className="flex items-center gap-6 justify-center flex-wrap">
             <a
-              href="mailto:khanmonir1335@gmail.com?subject=Palaiche Template Support!"
+              href={`mailto:${SUPPORT_EMAIL}?subject=Palaiche Template Support!`}
               className="py-4 px-6 rounded-md border-2 border-solid border-primary font-semibold text-gray hover:bg-primary hover:text-black transition-all duration-500 hover:-translate-y-2 -mt-5"
             >
               Contact Us
             </a>
             <Link
-              href="#"
+              href={PURCHASE_URL}
               className="py-4 px-6 rounded-md border-2 border-solid border-primary font-semibold text-gray hover:bg-primary hover:text-black transition-all duration-500 hover:-translate-y-2 -mt-5"
             >
               PURCHASE NOW

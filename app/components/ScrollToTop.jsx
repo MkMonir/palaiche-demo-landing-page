@@ -10,6 +10,8 @@ export const ScrollToTop = () => {
   useEffect(() => {
     let calcScrollValue = () => {
       const scrollProgress = document.getElementById("progress");
+      if (!scrollProgress) return;
+
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop; // Some browsers use document.body
       const calcHeight =

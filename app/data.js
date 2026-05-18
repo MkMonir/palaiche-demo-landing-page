@@ -53,6 +53,12 @@ import { FaPenNib, FaLayerGroup } from "react-icons/fa6";
 
 const BASE_URL = "https://palaiche-template.vercel.app";
 
+// Centralized links (used across header/hero/footer)
+export const DOCS_URL = "https://palaiche-documentation.vercel.app/";
+export const SUPPORT_EMAIL = "khanmonir1335@gmail.com";
+// TODO: Replace with your real purchase URL (ThemeForest/Gumroad/etc.)
+export const PURCHASE_URL = "#";
+
 export const demoItems = [
   // ==========================================
   // HOME PAGES

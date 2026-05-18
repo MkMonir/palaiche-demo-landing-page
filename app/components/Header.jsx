@@ -7,6 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
+import { DOCS_URL, PURCHASE_URL, SUPPORT_EMAIL } from "../data";
 
 const Header = () => {
   const { sticky } = useSticky(100);
@@ -24,6 +25,9 @@ const Header = () => {
         </Link>
 
         <button
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
           className="block lg:hidden text-4xl text-gray"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
@@ -39,31 +43,42 @@ const Header = () => {
         >
           <ul className="flex flex-col lg:flex-row items-center lg:gap-10 gap-5 text-gray bg-tertiary lg:bg-transparent w-full lg:w-fit py-10 lg:py-0">
             <li>
-              <Link href="#demos" className="">
+              <Link href="#demos" onClick={() => setMenuOpen(false)}>
                 Demos
               </Link>
             </li>
             <li>
-              <Link href="#feature">Features</Link>
+              <Link href="#feature" onClick={() => setMenuOpen(false)}>
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link href="#quick-start" onClick={() => setMenuOpen(false)}>
+                Quick Start
+              </Link>
             </li>
 
             <li>
               <Link
-                href="https://palaiche-documentation.vercel.app/"
+                href={DOCS_URL}
                 target="_blank"
               >
                 Documentation
               </Link>
             </li>
             <li>
-              <a href="mailto:khanmonir1335@gmail.com?subject=Palaiche Template Support!">
+              <a
+                href={`mailto:${SUPPORT_EMAIL}?subject=Palaiche Template Support!`}
+                onClick={() => setMenuOpen(false)}
+              >
                 Support
               </a>
             </li>
             <li>
               <Link
-                href="#"
+                href={PURCHASE_URL}
                 className="py-4 px-6 rounded-md bg-[#212e48] font-semibold text-gray hover:bg-primary transition-all duration-500 hover:-translate-y-2 block lg:hidden"
+                onClick={() => setMenuOpen(false)}
               >
                 PURCHASE NOW
               </Link>
@@ -71,7 +86,7 @@ const Header = () => {
           </ul>
 
           <Link
-            href="#"
+            href={PURCHASE_URL}
             className="py-4 px-6 rounded-md bg-[#212e48] font-semibold text-gray hover:bg-primary transition-all duration-500 hover:-translate-y-2 hidden lg:block"
           >
             PURCHASE NOW

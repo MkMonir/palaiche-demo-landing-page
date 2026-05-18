@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DOCS_URL, PURCHASE_URL } from "../data";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
 
           <div className="flex flex-col items-center gap-8 sm:flex-row">
             <Link
-              href="#"
+              href={PURCHASE_URL}
               className="py-4 px-6 rounded-md border-2 border-solid border-primary bg-primary font-semibold text-gray hover:bg-transparent hover:text-gray transition-all duration-500 hover:-translate-y-2 uppercase w-[200px] text-center"
             >
               PURCHASE NOW
@@ -27,6 +28,14 @@ const Hero = () => {
               className="py-4 px-6 rounded-md border-2 border-solid border-primary font-semibold text-gray hover:bg-primary hover:text-gray transition-all duration-500 hover:-translate-y-2 w-[200px] text-center"
             >
               View Demos
+            </Link>
+
+            <Link
+              href={DOCS_URL}
+              target="_blank"
+              className="py-4 px-6 rounded-md border-2 border-solid border-border font-semibold text-gray hover:border-primary transition-all duration-500 hover:-translate-y-2 w-[200px] text-center"
+            >
+              Docs
             </Link>
           </div>
         </div>
