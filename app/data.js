@@ -327,7 +327,7 @@ export const features = [
   {
     id: 2,
     icon: <TbBrandTailwind />,
-    title: "Tailwind CSS v3.5+",
+    title: "Tailwind CSS v3.4+",
     desc: "Utilizes the latest Tailwind CSS framework for rapid UI development, utility-first styling, and easy customization.",
   },
   {
