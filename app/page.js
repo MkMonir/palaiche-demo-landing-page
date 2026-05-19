@@ -163,7 +163,7 @@ export default function Home() {
           {/* TITLE */}
 
           <Link
-            href="#"
+            href="https://www.templatemonster.com/website-templates/palaiche-multipurpose-business-agency-html-tailwind-css-template-569933.html?_gl=1*1k5zdi8*_ga*NjYxMjg0NzU2LjE3NTg4ODE3NjA.*_ga_FTPYEGT5LY*czE3NzkxOTE3MjAkbzYzNiRnMSR0MTc3OTE5MjcwNyRqNTMkbDEkaDEzNDM4Njg4NDM."
             className="py-4 px-6 rounded-md border-2 border-solid border-primary font-semibold text-gray hover:bg-primary hover:text-black transition-all duration-500 hover:-translate-y-2 -mt-5"
           >
             PURCHASE NOW
