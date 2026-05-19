@@ -57,7 +57,8 @@ const BASE_URL = "https://palaiche-template.vercel.app";
 export const DOCS_URL = "https://palaiche-documentation.vercel.app/";
 export const SUPPORT_EMAIL = "khanmonir1335@gmail.com";
 // TODO: Replace with your real purchase URL (ThemeForest/Gumroad/etc.)
-export const PURCHASE_URL = "#";
+export const PURCHASE_URL =
+  "https://www.templatemonster.com/website-templates/palaiche-multipurpose-business-agency-html-tailwind-css-template-569933.html?_gl=1*1k5zdi8*_ga*NjYxMjg0NzU2LjE3NTg4ODE3NjA.*_ga_FTPYEGT5LY*czE3NzkxOTE3MjAkbzYzNiRnMSR0MTc3OTE5MjcwNyRqNTMkbDEkaDEzNDM4Njg4NDM.";
 
 export const demoItems = [
   // ==========================================
